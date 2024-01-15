@@ -9,7 +9,7 @@ function Navbar() {
         <nav className="navbar">
             <NavLink to="/">Shop</NavLink>
             <NavLink to="/cart">Cart</NavLink>
-            <NavLink to="/profile">User</NavLink>
+            <NavLink to="/user">User</NavLink>
             {!auth.user && (
                 <NavLink to="/login">Login</NavLink>
             )}

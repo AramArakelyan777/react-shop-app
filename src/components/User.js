@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { useAuth } from "./auth"
 import "../css/Login.css"
 
-function Profile() {
+function User() {
     const auth = useAuth()
     const navigate = useNavigate()
 
@@ -17,4 +17,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default User
