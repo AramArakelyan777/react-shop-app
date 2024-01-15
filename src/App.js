@@ -18,7 +18,7 @@ function App() {
                     <Route path="/" element={<Shop />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="*" element={<NotFound />} />
-                    <Route path="/profile" element={<RequireAuth><User /></RequireAuth>} />
+                    <Route path="/user" element={<RequireAuth><User /></RequireAuth>} />
                     <Route path="/login" element={<Login />} />
                 </Routes>
             </AuthProvider>
