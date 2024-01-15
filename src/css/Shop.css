@@ -16,3 +16,19 @@
     border-radius: 30px;
     max-width: 100%;
 }
+
+.addToCart {
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    border: 1px solid;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.addToCart:hover {
+    background-color: white;
+    color: black;
+}

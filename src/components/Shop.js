@@ -10,6 +10,7 @@ function Shop() {
                         <img src={item.url} alt="product" />
                         <h2>{item.name}</h2>
                         <p>Cost: ${item.cost}</p>
+                        <button className="addToCart">Add To Cart</button>
                     </div>
                 )
             })}
