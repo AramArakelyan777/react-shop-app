@@ -1,0 +1,27 @@
+.username {
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 7px;
+    box-sizing: border-box;
+    font-style: italic;
+}
+
+.logIn,
+.logOut {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    background-color: green;
+}
+
+.logIn:hover,
+.logOut:hover {
+    background-color: white;
+    color: green;
+}
