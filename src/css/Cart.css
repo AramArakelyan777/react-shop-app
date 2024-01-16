@@ -1,0 +1,29 @@
+.cartItem {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.cartItemImg {
+    border-radius: 30px;
+    max-width: 100%;
+    width: 200px;
+}
+
+.cartItemName {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 630px) {
+    .cartItem {
+        display: block;
+        width: 250px;
+    }
+}
