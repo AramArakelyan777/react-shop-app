@@ -1,5 +1,5 @@
 .cartItem {
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     border: 1px solid lightgray;
     border-radius: 30px;
@@ -13,7 +13,7 @@
 .cartItemImg {
     border-radius: 30px;
     max-width: 100%;
-    width: 200px;
+    width: 180px;
 }
 
 .cartItemName {
