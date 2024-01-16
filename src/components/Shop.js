@@ -1,7 +1,11 @@
 import PRODUCTS from "../products/products"
 import "../css/Shop.css"
+import { ShopContext } from "./ShopContext"
+import { useContext } from 'react'
 
 function Shop() {
+    const { cartItems, addAnItem, removeAnItem } = useContext(ShopContext)
+
     return (
         <div className="productsContainer">
             {PRODUCTS.map(item => {
@@ -10,7 +14,7 @@ function Shop() {
                         <img src={item.url} alt="product" />
                         <h2>{item.name}</h2>
                         <p>Cost: ${item.cost}</p>
-                        <button className="addToCart">Add To Cart</button>
+                        <button className="addToCart" onClick={() => addAnItem(item.id)}>Add To Cart</button>
                     </div>
                 )
             })}
