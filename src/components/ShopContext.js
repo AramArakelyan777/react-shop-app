@@ -16,10 +16,12 @@ const cartItemsReducer = (state, action) => {
                 [action.payload]: state[action.payload] - 1
             }
         case "update-an-item":
-            return {
-                ...state,
-                [action.payload.itemId]: action.payload.newAmount
-            }
+            if (action.payload.newAmount >= 0) {
+                return {
+                    ...state,
+                    [action.payload.itemId]: action.payload.newAmount
+                }
+            } else return state
         default:
             return state
     }
