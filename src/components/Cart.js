@@ -5,6 +5,10 @@ import { useContext } from "react"
 
 function Cart() {
     const { cartItems } = useContext(ShopContext)
+    let totalPrice = 0
+    for (const [key, value] of Object.entries(cartItems)) {
+        totalPrice += value * PRODUCTS[key - 1].cost
+    }
 
     return (
         <div>
@@ -17,14 +21,15 @@ function Cart() {
                             <div>
                                 <p className="cartItemName">{item.name}</p>
                                 <p className="cartItemCost">${item.cost}</p>
+                                <button>-</button>
+                                <input className="cartItemCount" />
+                                <button>+</button>
                             </div>
                         </div>
                     )
                 } return <></>
             })}
-            <div>
-                <h3>Total: $</h3>
-            </div>
+            <div>{totalPrice > 0 && <h3>Total: ${totalPrice}</h3>}</div>
         </div>
     )
 }

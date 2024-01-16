@@ -36,6 +36,5 @@ export const ShopContextProvider = ({ children }) => {
     const removeAnItem = (itemId) => {
         dispatchCartItems({ type: "remove-an-item", payload: itemId })
     }
-    console.log(cartItems)
     return <ShopContext.Provider value={{ cartItems, addAnItem, removeAnItem }}>{children}</ShopContext.Provider>
 }
