@@ -15,6 +15,11 @@ const cartItemsReducer = (state, action) => {
                 ...state,
                 [action.payload]: state[action.payload] - 1
             }
+        case "update-an-item":
+            return {
+                ...state,
+                [action.payload.itemId]: action.payload.newAmount
+            }
         default:
             return state
     }
@@ -36,5 +41,10 @@ export const ShopContextProvider = ({ children }) => {
     const removeAnItem = (itemId) => {
         dispatchCartItems({ type: "remove-an-item", payload: itemId })
     }
-    return <ShopContext.Provider value={{ cartItems, addAnItem, removeAnItem }}>{children}</ShopContext.Provider>
+
+    const updateAnItem = (newAmount, itemId) => {
+        dispatchCartItems({ type: "update-an-item", payload: { newAmount, itemId } })
+    }
+
+    return <ShopContext.Provider value={{ cartItems, addAnItem, removeAnItem, updateAnItem }}>{children}</ShopContext.Provider>
 }
