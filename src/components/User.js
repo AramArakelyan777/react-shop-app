@@ -8,7 +8,7 @@ function User() {
 
     return (
         <div>
-            <h1>Welcome, {auth.user}!</h1>
+            <h2>Welcome, {auth.user}!</h2>
             <button className="logOut" onClick={() => {
                 auth.logout()
                 navigate("/")
