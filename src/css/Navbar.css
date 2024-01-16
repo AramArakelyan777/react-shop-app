@@ -13,3 +13,9 @@
 .navbar a.active {
     color: green;
 }
+
+@media screen and (max-width: 310px) {
+    .navbar a {
+        font-size: 13px;
+    }
+}
