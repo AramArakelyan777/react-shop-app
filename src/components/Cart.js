@@ -22,9 +22,9 @@ function Cart() {
                             <div>
                                 <p className="cartItemName">{item.name}</p>
                                 <p className="cartItemCost">${item.cost}</p>
-                                <button onClick={() => removeAnItem(item.id)}>-</button>
+                                <button className="cartItemDecrease" onClick={() => removeAnItem(item.id)}>-</button>
                                 <input className="cartItemCount" value={cartItems[item.id]} onChange={(evt) => updateAnItem(Number(evt.target.value), item.id)} />
-                                <button onClick={() => addAnItem(item.id)}>+</button>
+                                <button className="cartItemIncrease" onClick={() => addAnItem(item.id)}>+</button>
                             </div>
                         </div>
                     )

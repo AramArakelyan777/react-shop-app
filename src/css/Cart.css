@@ -23,6 +23,17 @@
 
 .cartItemCount {
     width: 40px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid black;
+}
+
+.cartItemDecrease,
+.cartItemIncrease {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 630px) {
